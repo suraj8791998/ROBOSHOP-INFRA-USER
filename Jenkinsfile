@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('build') { 
             steps {
-                echo "build"
+                sh 'terraform init'
             }
         }
         stage('Test') { 
             steps {
                 // 
-                echo "test"
+                sh 'terraform plan'
             }
         }
 

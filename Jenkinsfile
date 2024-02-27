@@ -12,11 +12,18 @@ pipeline {
                 echo "test"
             }
         }
-        stage('Deploy') { 
+
+         stage('approval') {
             steps {
-                // 
-                echo "deploy"
+                input('Do you want to proceed?')
             }
         }
+        stage('apply') { 
+            steps {
+                // 
+                sh 'terraform apply -auto-approve'
+            }
+        }
+
     }
 }

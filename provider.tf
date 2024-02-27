@@ -8,7 +8,7 @@ terraform {
 
   backend "s3" {
     bucket = "roboshop-s3-bucket-suraj"
-    key    = "vpc-advance"
+    key    = "jenkins"
     region = "us-east-1"
   }
 }

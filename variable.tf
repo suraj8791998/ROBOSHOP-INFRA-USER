@@ -12,9 +12,6 @@ variable "common_tags" {
     Project     = "Roboshop"
   }
 }
-variable "project_name" {
-  default = ""
-}
 
 variable "environment" {
   default = "dev"
@@ -58,3 +55,4 @@ variable "database_cidr" {
 
 variable "database_subnet" {
   default = ["database_subnet_1a", "database_subnet_1b"]
+}
